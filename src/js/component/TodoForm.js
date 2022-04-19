@@ -6,8 +6,11 @@ function TodoForm(props) {
 	const inputRef = useRef(null);
 
 	useEffect(() => {
-		inputRef.current.focus();
-	});
+		// inputRef.current.focus();
+		fetch("https://swapi.dev/api/")
+			.then((response) => response.json())
+			.then((json) => console.log(json));
+	}, []);
 
 	const handleChange = (e) => {
 		setInput(e.target.value);

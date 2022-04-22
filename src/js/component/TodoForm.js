@@ -7,7 +7,7 @@ function TodoForm(props) {
 
 	useEffect(() => {
 		// inputRef.current.focus();
-		fetch("https://swapi.dev/api/")
+		fetch("http://assets.breatheco.de/apis/fake/todos/user/chad")
 			.then((response) => response.json())
 			.then((json) => console.log(json));
 	}, []);
